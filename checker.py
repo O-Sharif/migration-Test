@@ -27,8 +27,8 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # CONFIGURATION — Edit these before running
 # ─────────────────────────────────────────────
 CONFIG = {
-    "live_url":    "https://aboutfacesandbraces.com/",     # ← Old live site
-    "staging_url": "https://aboutfacesbraces.kinsta.cloud/",     # ← Kinsta staging URL
+    "live_url":    "https://www.rivervieworthodontics.com/",     # ← Old live site
+    "staging_url": "https://rivervieworthodontics.kinsta.cloud/",     # ← Kinsta staging URL
 
     # Crawl settings
     "max_pages":          200,     # Max pages to crawl from live site
