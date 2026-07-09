@@ -27,8 +27,8 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # CONFIGURATION — Edit these before running
 # ─────────────────────────────────────────────
 CONFIG = {
-    "live_url":    "http://www.scottedwardsdds.com/",     # ← Old live site
-    "staging_url": "https://scottedwards.kinsta.cloud/",     # ← Kinsta staging URL
+    "live_url":    "https://drliliortho.com/",     # ← Old live site
+    "staging_url": "https://drliliassociates.kinsta.cloud/",     # ← Kinsta staging URL
 
     # Crawl settings
     "max_pages":          200,     # Max pages to crawl from live site
@@ -36,7 +36,7 @@ CONFIG = {
     "request_timeout":    15,      # Seconds before timeout
 
     # Comparison thresholds
-    "content_similarity_threshold": 1.0,   # 0.0–1.0 (0.75 = 75% similar is OK)
+    "content_similarity_threshold": .90,   # 0.0–1.0 (0.75 = 75% similar is OK)
     "image_check":        True,             # Check images on each page
 
     # Output
@@ -55,11 +55,20 @@ CONFIG = {
 
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; WP-Migration-Checker/1.0)"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
 }
 
 session = requests.Session()
 session.headers.update(HEADERS)
+
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+_retry = Retry(total=2, backoff_factor=0.5, status_forcelist=[429, 500, 502, 503, 504])
+session.mount("https://", HTTPAdapter(max_retries=_retry))
+session.mount("http://", HTTPAdapter(max_retries=_retry))
 
 
 # ══════════════════════════════════════════════
@@ -84,7 +93,7 @@ def crawl_site(base_url: str) -> list[str]:
         visited.add(norm_url)
 
         try:
-            resp = session.get(url, timeout=CONFIG["request_timeout"], verify=False)
+            resp = session.get(url, timeout=(10, CONFIG["request_timeout"]), verify=False)
             if resp.status_code != 200:
                 continue
             ct = resp.headers.get("Content-Type", "")
@@ -185,12 +194,12 @@ def check_url(live_url: str) -> dict:
 
     try:
         # Fetch live page
-        live_resp = session.get(live_url, timeout=CONFIG["request_timeout"], verify=False)
+        live_resp = session.get(live_url, timeout=(10, CONFIG["request_timeout"]), verify=False)
         result["live_status"] = live_resp.status_code
 
         # Fetch staging page
         staging_resp = session.get(
-            staging_url, timeout=CONFIG["request_timeout"],
+            staging_url, timeout=(10, CONFIG["request_timeout"]),
             verify=False, auth=auth
         )
         result["staging_status"] = staging_resp.status_code

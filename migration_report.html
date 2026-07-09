@@ -1,0 +1,2099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WP Migration Report — 2026-06-28 18:46:39</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Sora:wght@400;600;700&display=swap');
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e; --ok: #22c55e;
+    --fail: #ef4444; --warn: #f59e0b; --accent: #58a6ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Sora', sans-serif; padding: 2rem; }
+  h1 { font-size: 1.6rem; font-weight: 700; margin-bottom: 0.25rem; }
+  .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 2rem; font-family: 'JetBrains Mono', monospace; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem; }
+  .card .val { font-size: 2rem; font-weight: 700; }
+  .card .lbl { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: .05em; margin-top: .25rem; }
+  .sr { font-size: 2.4rem !important; color: #ef4444; }
+  table { width: 100%; border-collapse: collapse; background: var(--surface); border-radius: 10px; overflow: hidden; border: 1px solid var(--border); font-size: 0.82rem; }
+  th { background: #21262d; padding: .7rem 1rem; text-align: left; font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  td { padding: .65rem 1rem; border-top: 1px solid var(--border); vertical-align: top; }
+  td.center { text-align: center; }
+  tr.ok td:first-child  { border-left: 3px solid var(--ok); }
+  tr.fail td:first-child { border-left: 3px solid var(--fail); }
+  tr.ok:hover, tr.fail:hover { background: #1c2128; }
+  td a { color: var(--accent); text-decoration: none; word-break: break-all; }
+  td a:hover { text-decoration: underline; }
+  .arrow { color: var(--muted); font-size: .7rem; margin-left: .3rem; }
+  /* Badges */
+  .badge { display:inline-block; padding:.2rem .5rem; border-radius:5px; font-size:.72rem; font-weight:600; }
+  .b-ok   { background:#14532d; color:#4ade80; }
+  .b-fail { background:#450a0a; color:#f87171; }
+  .b-warn { background:#422006; color:#fb923c; }
+  /* Detail rows */
+  .detail-row { display: none; }
+  .detail-row.open { display: table-row; }
+  .detail-row td { padding: 0; border-top: none; }
+  .detail-wrap { background: #0d1117; border-top: 1px solid var(--border); padding: 1rem 1.5rem 1.2rem; }
+  .detail-block { margin-bottom: 1.2rem; }
+  .detail-title { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: .6rem; }
+  /* Side by side diff */
+  .diff-row { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin-bottom: .5rem; }
+  .diff-col { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: .6rem .8rem; }
+  .col-label { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: .4rem; }
+  .diff-item { font-family: 'JetBrains Mono', monospace; font-size: .75rem; word-break: break-all; padding: .3rem .5rem; border-radius: 4px; margin-bottom: .25rem; }
+  .ok-item      { background: #14532d33; color: #4ade80; border-left: 3px solid #22c55e; }
+  .bad-item     { background: #450a0a33; color: #f87171; border-left: 3px solid #ef4444; }
+  .live-item    { background: #1e3a5f33; color: #93c5fd; border-left: 3px solid #3b82f6; }
+  .staging-item { background: #4a1d9633; color: #c4b5fd; border-left: 3px solid #8b5cf6; }
+  /* Word tags */
+  .word-tag { display:inline-block; padding:.1rem .4rem; border-radius:4px; font-size:.7rem; font-family:'JetBrains Mono',monospace; margin:.1rem; }
+  .live-tag    { background:#1e3a5f; color:#93c5fd; }
+  .staging-tag { background:#3b0764; color:#c4b5fd; }
+  .none-tag { color: var(--muted); font-size: .75rem; font-style: italic; }
+  /* Filter */
+  .filter-bar { display: flex; gap: .6rem; margin-bottom: 1rem; flex-wrap: wrap; }
+  .btn { padding: .4rem .9rem; border-radius: 6px; border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; font-size: .8rem; transition: .15s; }
+  .btn:hover, .btn.active { background: var(--accent); border-color: var(--accent); color: #000; }
+  .section-title { font-size: .75rem; font-weight: 600; margin: 1.5rem 0 .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; }
+</style>
+</head>
+<body>
+<h1>🚀 WordPress Migration Report</h1>
+<div class="subtitle">
+  Live: https://drliliortho.com/ &nbsp;→&nbsp; Staging: https://drliliassociates.kinsta.cloud/
+  &nbsp;|&nbsp; Generated: 2026-06-28 18:46:39
+</div>
+
+<div class="cards">
+  <div class="card"><div class="val sr">0.0%</div><div class="lbl">Success Rate</div></div>
+  <div class="card"><div class="val">80</div><div class="lbl">Total Pages</div></div>
+  <div class="card"><div class="val" style="color:var(--ok)">80</div><div class="lbl">URLs OK</div></div>
+  <div class="card"><div class="val" style="color:var(--ok)">0</div><div class="lbl">URLs Missing</div></div>
+  <div class="card"><div class="val" style="color:var(--warn)">77</div><div class="lbl">Content OK</div></div>
+  <div class="card"><div class="val" style="color:var(--warn)">0</div><div class="lbl">Images OK</div></div>
+  <div class="card"><div class="val" style="color:var(--ok)">0</div><div class="lbl">Errors</div></div>
+</div>
+
+<div class="section-title">Page-by-Page Results — click a row to see exact mismatches</div>
+<div class="filter-bar">
+  <button class="btn active" onclick="filterRows('all')">All (80)</button>
+  <button class="btn" onclick="filterRows('fail')">Issues Only (80)</button>
+  <button class="btn" onclick="filterRows('ok')">Passing (0)</button>
+</div>
+
+<table id="results-table">
+  <thead>
+    <tr>
+      <th>Live URL (click to expand)</th>
+      <th>URL Status</th>
+      <th>Text Match</th>
+      <th>Images</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+        <tr class="fail" onclick="toggle(342237)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/</a>
+                <span class='arrow' id='arr-342237'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">96%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-342237'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(492917)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/your-first-visit/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/your-first-visit/</a>
+                <span class='arrow' id='arr-492917'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">99%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-492917'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(774261)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/financial-info/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/financial-info/</a>
+                <span class='arrow' id='arr-774261'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-774261'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(599901)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/patient-forms/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/patient-forms/</a>
+                <span class='arrow' id='arr-599901'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-warn">90%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-599901'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">⚠ Text Mismatch — 90% similar</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">Words only in LIVE</div>
+                    <div><span class="word-tag live-tag">access</span> <span class="word-tag live-tag">details</span> <span class="word-tag live-tag">pages</span> <span class="word-tag live-tag">portal</span> <span class="word-tag live-tag">related</span></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">Words only in STAGING</div>
+                    <div><span class="none-tag">none</span></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">Sentences only in LIVE</div>
+                    <div class="diff-item live-item">"patient form (english) patient form (spanish) get started related pages: access your patient portal first visit details"</div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">Sentences only in STAGING</div>
+                    <div class="diff-item staging-item">"patient form (english) patient form (spanish) get started"</div>
+                  </div>
+                </div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(137183)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/new-patients/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/new-patients/</a>
+                <span class='arrow' id='arr-137183'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-warn">13%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 2 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-137183'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">⚠ Text Mismatch — 13% similar</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">Words only in LIVE</div>
+                    <div><span class="word-tag live-tag">about</span> <span class="word-tag live-tag">accessible</span> <span class="word-tag live-tag">accommodate</span> <span class="word-tag live-tag">additional</span> <span class="word-tag live-tag">adjustment</span> <span class="word-tag live-tag">adjustments</span> <span class="word-tag live-tag">aesthetic</span> <span class="word-tag live-tag">aesthetics</span> <span class="word-tag live-tag">affect</span> <span class="word-tag live-tag">affordable</span> <span class="word-tag live-tag">after</span> <span class="word-tag live-tag">aligners</span> <span class="word-tag live-tag">alignment</span> <span class="word-tag live-tag">also</span> <span class="word-tag live-tag">among</span> <span class="word-tag live-tag">anaheim</span> <span class="word-tag live-tag">angeles</span> <span class="word-tag live-tag">appeal</span> <span class="word-tag live-tag">apply</span> <span class="word-tag live-tag">appointments</span></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">Words only in STAGING</div>
+                    <div><span class="none-tag">none</span></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">Sentences only in LIVE</div>
+                    <div class="diff-item live-item">"learn more learn more patient forms patient rewards get started frequently asked questions how much is an invisalign"</div><div class="diff-item live-item">"the cost of invisalign treatment at dr"</div><div class="diff-item live-item">"lili & associates typically ranges from $3,000 to $8,000, depending on individual needs and treatment complexity"</div><div class="diff-item live-item">"for specific pricing tailored to your orthodontic needs, we encourage you to schedule a consultation"</div><div class="diff-item live-item">"the cost of braces varies based on individual needs and treatment types, typically ranging from $3,000 to $7,000"</div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">Sentences only in STAGING</div>
+                    <div class="diff-item staging-item">"learn more learn more patient forms patient rewards get started"</div>
+                  </div>
+                </div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/wp-content/uploads/bb-plugin/cache/0I0A8172-square-9277413653e183fe09361e41c8eae303-cl62mjbori79.jpg" target="_blank">https://drliliortho.com/wp-content/uploads/bb-plugin/cache/0I0A8172-square-9277413653e183fe09361e41c8eae303-cl62mjbori79.jpg</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/0I0A8172-square-9277413653e183fe09361e41c8eae303-cl62mjbori79.jpg" target="_blank">https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/0I0A8172-square-9277413653e183fe09361e41c8eae303-cl62mjbori79.jpg</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(155011)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/free-consult" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/free-consult</a>
+                <span class='arrow' id='arr-155011'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-warn">32%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-155011'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">⚠ Text Mismatch — 32% similar</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">Words only in LIVE</div>
+                    <div><span class="word-tag live-tag">linkedin</span></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">Words only in STAGING</div>
+                    <div><span class="word-tag staging-tag">twitter</span></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">Sentences only in LIVE</div>
+                    <div class="diff-item live-item">"linkedin this field is for validation purposes and should be left unchanged"</div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">Sentences only in STAGING</div>
+                    <div class="diff-item staging-item">"x/twitter this field is for validation purposes and should be left unchanged"</div>
+                  </div>
+                </div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(27277)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/community/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/community/</a>
+                <span class='arrow' id='arr-27277'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-27277'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(79147)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/reviews-testimonials/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/reviews-testimonials/</a>
+                <span class='arrow' id='arr-79147'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-79147'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(127795)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/meet-your-doctors/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/meet-your-doctors/</a>
+                <span class='arrow' id='arr-127795'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">98%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 3 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-127795'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/wp-content/uploads/bb-plugin/cache/HS2-scaled-portrait-4ee351c35c14009725232a001368f863-r16wfio8bed7.jpg" target="_blank">https://drliliortho.com/wp-content/uploads/bb-plugin/cache/HS2-scaled-portrait-4ee351c35c14009725232a001368f863-r16wfio8bed7.jpg</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/HS2-scaled-portrait-4ee351c35c14009725232a001368f863-r16wfio8bed7.jpg" target="_blank">https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/HS2-scaled-portrait-4ee351c35c14009725232a001368f863-r16wfio8bed7.jpg</a></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/wp-content/uploads/bb-plugin/cache/12-Ashley-Mach-Portrait-scaled-portrait-dd74ac5d48c130e37ec83e416dd6c649-47vq69ak8iu3.jpg" target="_blank">https://drliliortho.com/wp-content/uploads/bb-plugin/cache/12-Ashley-Mach-Portrait-scaled-portrait-dd74ac5d48c130e37ec83e416dd6c649-47vq69ak8iu3.jpg</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/12-Ashley-Mach-Portrait-scaled-portrait-dd74ac5d48c130e37ec83e416dd6c649-47vq69ak8iu3.jpg" target="_blank">https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/12-Ashley-Mach-Portrait-scaled-portrait-dd74ac5d48c130e37ec83e416dd6c649-47vq69ak8iu3.jpg</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(517541)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/about-us/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/about-us/</a>
+                <span class='arrow' id='arr-517541'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 5 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-517541'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/wp-content/uploads/bb-plugin/cache/0I0A8826-square-b1bc8159562fa9f1dd2f318912c6bb6a-nj81u4bsxvt6.jpg" target="_blank">https://drliliortho.com/wp-content/uploads/bb-plugin/cache/0I0A8826-square-b1bc8159562fa9f1dd2f318912c6bb6a-nj81u4bsxvt6.jpg</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/0I0A8826-square-b1bc8159562fa9f1dd2f318912c6bb6a-nj81u4bsxvt6.jpg" target="_blank">https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/0I0A8826-square-b1bc8159562fa9f1dd2f318912c6bb6a-nj81u4bsxvt6.jpg</a></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/wp-content/uploads/bb-plugin/cache/anaheim-0I0A7938-square-2d9a47029033dd8705dcbbd8ef77263c-chg9rwlxdi52.jpg" target="_blank">https://drliliortho.com/wp-content/uploads/bb-plugin/cache/anaheim-0I0A7938-square-2d9a47029033dd8705dcbbd8ef77263c-chg9rwlxdi52.jpg</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/anaheim-0I0A7938-square-2d9a47029033dd8705dcbbd8ef77263c-chg9rwlxdi52.jpg" target="_blank">https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/anaheim-0I0A7938-square-2d9a47029033dd8705dcbbd8ef77263c-chg9rwlxdi52.jpg</a></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/wp-content/uploads/bb-plugin/cache/0I0A8041-square-b1ae02b2e02a405154597eaafc154011-oc57qprs1mi6.jpg" target="_blank">https://drliliortho.com/wp-content/uploads/bb-plugin/cache/0I0A8041-square-b1ae02b2e02a405154597eaafc154011-oc57qprs1mi6.jpg</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/0I0A8041-square-b1ae02b2e02a405154597eaafc154011-oc57qprs1mi6.jpg" target="_blank">https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/0I0A8041-square-b1ae02b2e02a405154597eaafc154011-oc57qprs1mi6.jpg</a></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/wp-content/uploads/bb-plugin/cache/4A7A4340-square-3ea6349cd4db1e380946ef8ad74b935e-5dadba9aabf78.jpg" target="_blank">https://drliliortho.com/wp-content/uploads/bb-plugin/cache/4A7A4340-square-3ea6349cd4db1e380946ef8ad74b935e-5dadba9aabf78.jpg</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/4A7A4340-square-3ea6349cd4db1e380946ef8ad74b935e-5dadba9aabf78.jpg" target="_blank">https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/4A7A4340-square-3ea6349cd4db1e380946ef8ad74b935e-5dadba9aabf78.jpg</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(266111)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/careers/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/careers/</a>
+                <span class='arrow' id='arr-266111'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-266111'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(221518)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/blog/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/blog/</a>
+                <span class='arrow' id='arr-221518'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-221518'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(708712)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/treatments/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/treatments/</a>
+                <span class='arrow' id='arr-708712'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 3 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-708712'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/wp-content/uploads/bb-plugin/cache/4A7A4498-square-e4b0be85ff6478f15b7fd0da4959f4d7-nq1eah8ijyot.jpg" target="_blank">https://drliliortho.com/wp-content/uploads/bb-plugin/cache/4A7A4498-square-e4b0be85ff6478f15b7fd0da4959f4d7-nq1eah8ijyot.jpg</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/4A7A4498-square-e4b0be85ff6478f15b7fd0da4959f4d7-nq1eah8ijyot.jpg" target="_blank">https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/4A7A4498-square-e4b0be85ff6478f15b7fd0da4959f4d7-nq1eah8ijyot.jpg</a></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/wp-content/uploads/bb-plugin/cache/Damon_Braces_Typodont-e1600701089908-square-b260abc12a9fa2be3dc23cc77d57788e-t12dxfspv4be.jpg" target="_blank">https://drliliortho.com/wp-content/uploads/bb-plugin/cache/Damon_Braces_Typodont-e1600701089908-square-b260abc12a9fa2be3dc23cc77d57788e-t12dxfspv4be.jpg</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/Damon_Braces_Typodont-e1600701089908-square-b260abc12a9fa2be3dc23cc77d57788e-t12dxfspv4be.jpg" target="_blank">https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/Damon_Braces_Typodont-e1600701089908-square-b260abc12a9fa2be3dc23cc77d57788e-t12dxfspv4be.jpg</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(205346)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/clear-aligners/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/clear-aligners/</a>
+                <span class='arrow' id='arr-205346'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-205346'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(14066)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/clear-braces/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/clear-braces/</a>
+                <span class='arrow' id='arr-14066'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 2 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-14066'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/wp-content/uploads/bb-plugin/cache/0I0A8138-cropped-square-01c638bd70ef54d7f968465e4e6fdcd7-w78ty3qug06i.jpg" target="_blank">https://drliliortho.com/wp-content/uploads/bb-plugin/cache/0I0A8138-cropped-square-01c638bd70ef54d7f968465e4e6fdcd7-w78ty3qug06i.jpg</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/0I0A8138-cropped-square-01c638bd70ef54d7f968465e4e6fdcd7-w78ty3qug06i.jpg" target="_blank">https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/0I0A8138-cropped-square-01c638bd70ef54d7f968465e4e6fdcd7-w78ty3qug06i.jpg</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(969572)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/metal-braces/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/metal-braces/</a>
+                <span class='arrow' id='arr-969572'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 2 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-969572'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/wp-content/uploads/bb-plugin/cache/0I0A8587-square-7f93800b1bb7c306d146a6f914853413-71tczu0s4pqg.jpg" target="_blank">https://drliliortho.com/wp-content/uploads/bb-plugin/cache/0I0A8587-square-7f93800b1bb7c306d146a6f914853413-71tczu0s4pqg.jpg</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/0I0A8587-square-7f93800b1bb7c306d146a6f914853413-71tczu0s4pqg.jpg" target="_blank">https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/0I0A8587-square-7f93800b1bb7c306d146a6f914853413-71tczu0s4pqg.jpg</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(642806)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/orthodontics-for-all-ages/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/orthodontics-for-all-ages/</a>
+                <span class='arrow' id='arr-642806'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 2 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-642806'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/wp-content/uploads/bb-plugin/cache/0I0A8587-square-7f93800b1bb7c306d146a6f914853413-gfjw0snkhb6v.jpg" target="_blank">https://drliliortho.com/wp-content/uploads/bb-plugin/cache/0I0A8587-square-7f93800b1bb7c306d146a6f914853413-gfjw0snkhb6v.jpg</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/0I0A8587-square-7f93800b1bb7c306d146a6f914853413-gfjw0snkhb6v.jpg" target="_blank">https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/0I0A8587-square-7f93800b1bb7c306d146a6f914853413-gfjw0snkhb6v.jpg</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(852684)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/contact-us/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/contact-us/</a>
+                <span class='arrow' id='arr-852684'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-852684'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(595162)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/braces-aligner-care/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/braces-aligner-care/</a>
+                <span class='arrow' id='arr-595162'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 2 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-595162'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/wp-content/uploads/bb-plugin/cache/AdobeStock_282233627-portrait-af2704bc294d0f31257f375b1c7216d4-tu34bg2dy97x.jpg" target="_blank">https://drliliortho.com/wp-content/uploads/bb-plugin/cache/AdobeStock_282233627-portrait-af2704bc294d0f31257f375b1c7216d4-tu34bg2dy97x.jpg</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/AdobeStock_282233627-portrait-af2704bc294d0f31257f375b1c7216d4-tu34bg2dy97x.jpg" target="_blank">https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/AdobeStock_282233627-portrait-af2704bc294d0f31257f375b1c7216d4-tu34bg2dy97x.jpg</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(620523)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/review-us/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/review-us/</a>
+                <span class='arrow' id='arr-620523'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-620523'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(629082)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/anaheim-orthodontic-office/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/anaheim-orthodontic-office/</a>
+                <span class='arrow' id='arr-629082'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-629082'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(764684)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/el-monte-orthodontic-office/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/el-monte-orthodontic-office/</a>
+                <span class='arrow' id='arr-764684'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-764684'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(580801)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/huntington-park-orthodontic-office/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/huntington-park-orthodontic-office/</a>
+                <span class='arrow' id='arr-580801'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-580801'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(249684)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/lawndale-orthodontic-office/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/lawndale-orthodontic-office/</a>
+                <span class='arrow' id='arr-249684'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-249684'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(752904)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/los-angeles-orthodontic-office/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/los-angeles-orthodontic-office/</a>
+                <span class='arrow' id='arr-752904'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-752904'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(485365)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/santa-ana-orthodontic-office/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/santa-ana-orthodontic-office/</a>
+                <span class='arrow' id='arr-485365'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-485365'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(137438)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/whittier-orthodontic-office/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/whittier-orthodontic-office/</a>
+                <span class='arrow' id='arr-137438'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-137438'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(737017)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/ontario-orthodontic-office/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/ontario-orthodontic-office/</a>
+                <span class='arrow' id='arr-737017'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-737017'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(250789)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/patients-refer-a-friend/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/patients-refer-a-friend/</a>
+                <span class='arrow' id='arr-250789'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-250789'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(510837)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/doctor-referral/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/doctor-referral/</a>
+                <span class='arrow' id='arr-510837'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-510837'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(835245)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/patient-portal/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/patient-portal/</a>
+                <span class='arrow' id='arr-835245'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">98%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-835245'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(710436)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/privacy-policy" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/privacy-policy</a>
+                <span class='arrow' id='arr-710436'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-710436'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(22019)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/accessibility-statement-2" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/accessibility-statement-2</a>
+                <span class='arrow' id='arr-22019'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-22019'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(889821)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/your-el-monte-orthodontist/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/your-el-monte-orthodontist/</a>
+                <span class='arrow' id='arr-889821'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">98%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-889821'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(952488)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/anaheim-orthodontist/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/anaheim-orthodontist/</a>
+                <span class='arrow' id='arr-952488'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">98%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 2 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-952488'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/wp-content/uploads/bb-plugin/cache/anaheim-0I0A7950-square-85fbfae66072c2aa329756ae429a5962-gxh853tluner.jpg" target="_blank">https://drliliortho.com/wp-content/uploads/bb-plugin/cache/anaheim-0I0A7950-square-85fbfae66072c2aa329756ae429a5962-gxh853tluner.jpg</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/anaheim-0I0A7950-square-85fbfae66072c2aa329756ae429a5962-gxh853tluner.jpg" target="_blank">https://drliliassociates.kinsta.cloud/wp-content/uploads/bb-plugin/cache/anaheim-0I0A7950-square-85fbfae66072c2aa329756ae429a5962-gxh853tluner.jpg</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(593013)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/meet-dr-lili-mirtorabi" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/meet-dr-lili-mirtorabi</a>
+                <span class='arrow' id='arr-593013'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">99%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-593013'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(309686)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/orthodontist-los-angeles/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/orthodontist-los-angeles/</a>
+                <span class='arrow' id='arr-309686'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">98%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-309686'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(962825)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/your-los-angeles-orthodontist/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/your-los-angeles-orthodontist/</a>
+                <span class='arrow' id='arr-962825'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-962825'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(737740)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/your-lawndale-orthodontist/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/your-lawndale-orthodontist/</a>
+                <span class='arrow' id='arr-737740'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">97%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-737740'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(549690)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/your-santa-ana-orthodontist/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/your-santa-ana-orthodontist/</a>
+                <span class='arrow' id='arr-549690'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">96%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-549690'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(786916)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/why-is-it-important-to-use-a-retainer-after-braces/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/why-is-it-important-to-use-a-retainer-after-braces/</a>
+                <span class='arrow' id='arr-786916'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-786916'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(50757)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/how-do-i-handle-orthodontic-emergencies/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/how-do-i-handle-orthodontic-emergencies/</a>
+                <span class='arrow' id='arr-50757'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-50757'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(763998)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/can-i-still-play-sports-with-braces/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/can-i-still-play-sports-with-braces/</a>
+                <span class='arrow' id='arr-763998'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-763998'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(663531)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/how-do-braces-move-teeth/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/how-do-braces-move-teeth/</a>
+                <span class='arrow' id='arr-663531'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-663531'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(339037)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/how-to-maintain-good-oral-health-with-orthodontic-treatment/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/how-to-maintain-good-oral-health-with-orthodontic-treatment/</a>
+                <span class='arrow' id='arr-339037'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-339037'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(3258)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/celebrating-25-years-of-dr-lili-associates/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/celebrating-25-years-of-dr-lili-associates/</a>
+                <span class='arrow' id='arr-3258'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-3258'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(757732)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/do-i-need-dental-insurance-to-get-orthodontic-treatment/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/do-i-need-dental-insurance-to-get-orthodontic-treatment/</a>
+                <span class='arrow' id='arr-757732'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-757732'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(666306)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/5-benefits-of-straight-teeth/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/5-benefits-of-straight-teeth/</a>
+                <span class='arrow' id='arr-666306'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-666306'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(434831)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/blog/page/2/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/blog/page/2/</a>
+                <span class='arrow' id='arr-434831'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-434831'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(997946)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/anaheim-orthodontics/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/anaheim-orthodontics/</a>
+                <span class='arrow' id='arr-997946'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-997946'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(897328)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/anaheim-invisalign/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/anaheim-invisalign/</a>
+                <span class='arrow' id='arr-897328'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-897328'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(868720)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/clear-choice-aligner-instructions" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/clear-choice-aligner-instructions</a>
+                <span class='arrow' id='arr-868720'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-868720'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(504803)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/what-to-do-if-my-braces-break/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/what-to-do-if-my-braces-break/</a>
+                <span class='arrow' id='arr-504803'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-504803'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(560774)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/anaheim-braces/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/anaheim-braces/</a>
+                <span class='arrow' id='arr-560774'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-560774'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(740758)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/el-monte-orthodontics/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/el-monte-orthodontics/</a>
+                <span class='arrow' id='arr-740758'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-740758'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(79366)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/huntington-park-orthodontics/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/huntington-park-orthodontics/</a>
+                <span class='arrow' id='arr-79366'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">99%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-79366'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(3249)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/huntington-park-braces/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/huntington-park-braces/</a>
+                <span class='arrow' id='arr-3249'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-3249'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(732846)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/huntington-park-invisalign/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/huntington-park-invisalign/</a>
+                <span class='arrow' id='arr-732846'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-732846'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(420345)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/santa-ana-orthodontics/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/santa-ana-orthodontics/</a>
+                <span class='arrow' id='arr-420345'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-420345'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(472754)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/santa-ana-braces/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/santa-ana-braces/</a>
+                <span class='arrow' id='arr-472754'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-472754'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(475884)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/whittier-orthodontics/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/whittier-orthodontics/</a>
+                <span class='arrow' id='arr-475884'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-475884'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(86773)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/whittier-invisalign/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/whittier-invisalign/</a>
+                <span class='arrow' id='arr-86773'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-86773'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(278483)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/whittier-braces/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/whittier-braces/</a>
+                <span class='arrow' id='arr-278483'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-278483'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(993381)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/lawndale-braces/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/lawndale-braces/</a>
+                <span class='arrow' id='arr-993381'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-993381'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(988636)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/meet-dr-jennifer-wu/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/meet-dr-jennifer-wu/</a>
+                <span class='arrow' id='arr-988636'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-988636'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(704278)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/lawndale-invisalign/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/lawndale-invisalign/</a>
+                <span class='arrow' id='arr-704278'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-704278'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(610513)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/los-angeles-orthodontics/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/los-angeles-orthodontics/</a>
+                <span class='arrow' id='arr-610513'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-610513'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(566374)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/lawndale-orthodontics/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/lawndale-orthodontics/</a>
+                <span class='arrow' id='arr-566374'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-566374'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(725087)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/why-see-an-orthodontist-near-me/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/why-see-an-orthodontist-near-me/</a>
+                <span class='arrow' id='arr-725087'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-725087'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(576473)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/6-rules-to-creating-a-beautiful-smile-with-clear-aligners/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/6-rules-to-creating-a-beautiful-smile-with-clear-aligners/</a>
+                <span class='arrow' id='arr-576473'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-576473'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(313494)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/which-orthodontic-treatment-is-right-for-me/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/which-orthodontic-treatment-is-right-for-me/</a>
+                <span class='arrow' id='arr-313494'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-313494'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(525191)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/your-anaheim-orthodontist/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/your-anaheim-orthodontist/</a>
+                <span class='arrow' id='arr-525191'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-525191'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(107426)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/braces-los-angles/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/braces-los-angles/</a>
+                <span class='arrow' id='arr-107426'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-107426'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(374430)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/invisalign-los-angeles/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/invisalign-los-angeles/</a>
+                <span class='arrow' id='arr-374430'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-374430'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(800642)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/santa-ana-invisalign/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/santa-ana-invisalign/</a>
+                <span class='arrow' id='arr-800642'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-800642'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(196076)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/el-monte-invisalign/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/el-monte-invisalign/</a>
+                <span class='arrow' id='arr-196076'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-196076'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(462151)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/el-monte-braces/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/el-monte-braces/</a>
+                <span class='arrow' id='arr-462151'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-462151'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(205277)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/los-angeles-invisalign/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/los-angeles-invisalign/</a>
+                <span class='arrow' id='arr-205277'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-205277'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(446983)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/los-angeles-braces/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/los-angeles-braces/</a>
+                <span class='arrow' id='arr-446983'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-446983'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+        <tr class="fail" onclick="toggle(735534)" style="cursor:pointer">
+            <td><a href="https://drliliortho.com/invisalign/" target="_blank" onclick="event.stopPropagation()">https://drliliortho.com/invisalign/</a>
+                <span class='arrow' id='arr-735534'> ▼</span></td>
+            <td class="center"><span class="badge b-ok">200 OK</span></td>
+            <td class="center"><span class="badge b-ok">100%</span></td>
+            <td class="center"><span class="badge b-warn">⚠ 1 issue(s)</span></td>
+        </tr>
+        <tr class='detail-row' id='det-735534'><td colspan='4'><div class='detail-wrap'>
+            <div class="detail-block">
+              <div class="detail-title">🖼 Image Mismatches</div>
+              
+                <div class="diff-row">
+                  <div class="diff-col live">
+                    <div class="col-label">LIVE (exists ✓)</div>
+                    <div class="diff-item ok-item"><a href="https://drliliortho.com/tr" target="_blank">https://drliliortho.com/tr</a></div>
+                  </div>
+                  <div class="diff-col staging">
+                    <div class="col-label">STAGING (missing ✗)</div>
+                    <div class="diff-item bad-item"><a href="https://drliliassociates.kinsta.cloud/tr" target="_blank">https://drliliassociates.kinsta.cloud/tr</a></div>
+                  </div>
+                </div>
+            </div></div></td></tr>
+  </tbody>
+</table>
+
+<script>
+function toggle(uid) {
+  var det = document.getElementById('det-' + uid);
+  var arr = document.getElementById('arr-' + uid);
+  if (!det) return;
+  det.classList.toggle('open');
+  if (arr) arr.textContent = det.classList.contains('open') ? ' ▲' : ' ▼';
+}
+function filterRows(filter) {
+  document.querySelectorAll('.btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('#results-table tbody tr.ok, #results-table tbody tr.fail').forEach(tr => {
+    var uid = tr.getAttribute('onclick') ? tr.getAttribute('onclick').match(/\d+/) : null;
+    var detRow = uid ? document.getElementById('det-' + uid[0]) : null;
+    var show = filter === 'all'
+      || (filter === 'ok'   && tr.classList.contains('ok'))
+      || (filter === 'fail' && tr.classList.contains('fail'));
+    tr.style.display = show ? '' : 'none';
+    if (detRow) detRow.style.display = 'none';
+    if (detRow && uid) document.getElementById('arr-' + uid[0]) && (document.getElementById('arr-' + uid[0]).textContent = ' ▼');
+  });
+}
+</script>
+</body>
+</html>

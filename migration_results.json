@@ -1,0 +1,2945 @@
+{
+  "summary": {
+    "total_pages": 80,
+    "urls_ok": 80,
+    "urls_missing": 0,
+    "content_ok": 77,
+    "content_issues": 3,
+    "images_ok": 0,
+    "image_issues": 80,
+    "errors": 0,
+    "fully_ok": 0,
+    "success_rate": 0.0,
+    "generated_at": "2026-06-28 18:46:39"
+  },
+  "results": [
+    {
+      "live_url": "https://drliliortho.com/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 0.962,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/plugins/instagram-feed/img/placeholder.png",
+        "/wp-content/themes/canvas/img/established.svg",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/themes/canvas/img/play-button-green.svg",
+        "/wp-content/themes/canvas/img/play-button.svg",
+        "/wp-content/themes/canvas/img/proud-logo.svg",
+        "/wp-content/themes/canvas/img/quote.svg",
+        "/wp-content/themes/canvas/img/round-credit-card.svg",
+        "/wp-content/themes/canvas/img/round-heart.svg",
+        "/wp-content/themes/canvas/img/round-map-pointer.svg",
+        "/wp-content/themes/canvas/img/smiling-dr.jpg",
+        "/wp-content/themes/canvas/img/treatments-1.jpg",
+        "/wp-content/themes/canvas/img/treatments-2.jpg",
+        "/wp-content/themes/canvas/img/treatments-3.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/established.svg",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/themes/canvas/img/play-button-green.svg",
+        "/wp-content/themes/canvas/img/play-button.svg",
+        "/wp-content/themes/canvas/img/proud-logo.svg",
+        "/wp-content/themes/canvas/img/quote.svg",
+        "/wp-content/themes/canvas/img/round-credit-card.svg",
+        "/wp-content/themes/canvas/img/round-heart.svg",
+        "/wp-content/themes/canvas/img/round-map-pointer.svg",
+        "/wp-content/themes/canvas/img/smiling-dr.jpg",
+        "/wp-content/themes/canvas/img/treatments-1.jpg",
+        "/wp-content/themes/canvas/img/treatments-2.jpg",
+        "/wp-content/themes/canvas/img/treatments-3.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/your-first-visit/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/your-first-visit/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 0.9937,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/01/0I0A8375.jpg",
+        "/wp-content/uploads/2023/01/0I0A8587.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/01/0I0A8375.jpg",
+        "/wp-content/uploads/2023/01/0I0A8587.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/financial-info/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/financial-info/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/patient-forms/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/patient-forms/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 0.899,
+      "content_ok": false,
+      "text_diff": {
+        "words_only_in_live": [
+          "access",
+          "details",
+          "pages",
+          "portal",
+          "related"
+        ],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [
+          "patient form (english) patient form (spanish) get started related pages: access your patient portal first visit details"
+        ],
+        "sentences_only_in_staging": [
+          "patient form (english) patient form (spanish) get started"
+        ]
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/new-patients/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/new-patients/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 0.1272,
+      "content_ok": false,
+      "text_diff": {
+        "words_only_in_live": [
+          "about",
+          "accessible",
+          "accommodate",
+          "additional",
+          "adjustment",
+          "adjustments",
+          "aesthetic",
+          "aesthetics",
+          "affect",
+          "affordable",
+          "after",
+          "aligners",
+          "alignment",
+          "also",
+          "among",
+          "anaheim",
+          "angeles",
+          "appeal",
+          "apply",
+          "appointments",
+          "areas",
+          "arise",
+          "asked",
+          "associated",
+          "available",
+          "average",
+          "based",
+          "best",
+          "between",
+          "braces"
+        ],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [
+          "learn more learn more patient forms patient rewards get started frequently asked questions how much is an invisalign",
+          "the cost of invisalign treatment at dr",
+          "lili & associates typically ranges from $3,000 to $8,000, depending on individual needs and treatment complexity",
+          "for specific pricing tailored to your orthodontic needs, we encourage you to schedule a consultation",
+          "the cost of braces varies based on individual needs and treatment types, typically ranging from $3,000 to $7,000"
+        ],
+        "sentences_only_in_staging": [
+          "learn more learn more patient forms patient rewards get started"
+        ]
+      },
+      "missing_images": [
+        "/tr",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8172-square-9277413653e183fe09361e41c8eae303-cl62mjbori79.jpg"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/themes/canvas/img/proud-logo.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/01/0I0A8537.jpg",
+        "/wp-content/uploads/2023/01/0I5A1806.jpg",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8172-square-9277413653e183fe09361e41c8eae303-cl62mjbori79.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/themes/canvas/img/proud-logo.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/01/0I0A8537.jpg",
+        "/wp-content/uploads/2023/01/0I5A1806.jpg",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8172-square-bf069f2c77449a3ee43614dc455cb61b-cl62mjbori79.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/free-consult",
+      "staging_url": "https://drliliassociates.kinsta.cloud/free-consult",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 0.3166,
+      "content_ok": false,
+      "text_diff": {
+        "words_only_in_live": [
+          "linkedin"
+        ],
+        "words_only_in_staging": [
+          "twitter"
+        ],
+        "sentences_only_in_live": [
+          "linkedin this field is for validation purposes and should be left unchanged"
+        ],
+        "sentences_only_in_staging": [
+          "x/twitter this field is for validation purposes and should be left unchanged"
+        ]
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/community/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/community/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2025/11/community-logos-2.jpg",
+        "/wp-content/uploads/2026/05/Screenshot-2026-05-22-at-10.52.26-AM.png",
+        "/wp-content/uploads/2026/05/Screenshot-2026-05-22-at-10.52.54-AM-1.png"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2025/11/community-logos-2.jpg",
+        "/wp-content/uploads/2026/05/Screenshot-2026-05-22-at-10.52.26-AM.png",
+        "/wp-content/uploads/2026/05/Screenshot-2026-05-22-at-10.52.54-AM-1.png"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/reviews-testimonials/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/reviews-testimonials/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/meet-your-doctors/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/meet-your-doctors/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 0.9805,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr",
+        "/wp-content/uploads/bb-plugin/cache/HS2-scaled-portrait-4ee351c35c14009725232a001368f863-r16wfio8bed7.jpg",
+        "/wp-content/uploads/bb-plugin/cache/12-Ashley-Mach-Portrait-scaled-portrait-dd74ac5d48c130e37ec83e416dd6c649-47vq69ak8iu3.jpg"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-carrie-imoto.jpg",
+        "/wp-content/uploads/2022/06/meet-dr-grace-hur.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-jenny-jeon.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-sue-kim.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-yoonie-heo.jpeg",
+        "/wp-content/uploads/2023/01/IMG_2466.jpg",
+        "/wp-content/uploads/2024/06/JSL_Headshot-scaled.jpg",
+        "/wp-content/uploads/2025/01/Dr.-Lin-scaled.jpg",
+        "/wp-content/uploads/2025/05/Naomi-Low-Picture-scaled.jpg",
+        "/wp-content/uploads/2025/08/DrChris.png",
+        "/wp-content/uploads/2025/12/David-Bui-Headshot-scaled.jpg",
+        "/wp-content/uploads/bb-plugin/cache/12-Ashley-Mach-Portrait-scaled-portrait-dd74ac5d48c130e37ec83e416dd6c649-47vq69ak8iu3.jpg",
+        "/wp-content/uploads/bb-plugin/cache/HS2-scaled-portrait-4ee351c35c14009725232a001368f863-r16wfio8bed7.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-carrie-imoto.jpg",
+        "/wp-content/uploads/2022/06/meet-dr-grace-hur.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-jenny-jeon.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-sue-kim.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-yoonie-heo.jpeg",
+        "/wp-content/uploads/2023/01/IMG_2466.jpg",
+        "/wp-content/uploads/2024/06/JSL_Headshot-scaled.jpg",
+        "/wp-content/uploads/2025/01/Dr.-Lin-scaled.jpg",
+        "/wp-content/uploads/2025/05/Naomi-Low-Picture-scaled.jpg",
+        "/wp-content/uploads/2025/08/DrChris.png",
+        "/wp-content/uploads/2025/12/David-Bui-Headshot-scaled.jpg",
+        "/wp-content/uploads/bb-plugin/cache/12-Ashley-Mach-Portrait-scaled-portrait-c30c3b2aa235a9a1b0675ff03ad01ad5-47vq69ak8iu3.jpg",
+        "/wp-content/uploads/bb-plugin/cache/HS2-scaled-portrait-0cab02665fa6e93eab790b00f98283b2-r16wfio8bed7.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/about-us/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/about-us/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/wp-content/uploads/bb-plugin/cache/0I0A8826-square-b1bc8159562fa9f1dd2f318912c6bb6a-nj81u4bsxvt6.jpg",
+        "/wp-content/uploads/bb-plugin/cache/anaheim-0I0A7938-square-2d9a47029033dd8705dcbbd8ef77263c-chg9rwlxdi52.jpg",
+        "/tr",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8041-square-b1ae02b2e02a405154597eaafc154011-oc57qprs1mi6.jpg",
+        "/wp-content/uploads/bb-plugin/cache/4A7A4340-square-3ea6349cd4db1e380946ef8ad74b935e-5dadba9aabf78.jpg"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/themes/canvas/img/proud-logo.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2024/07/Screenshot-2024-07-03-at-11.21.27 AM.png",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8041-square-b1ae02b2e02a405154597eaafc154011-oc57qprs1mi6.jpg",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8826-square-b1bc8159562fa9f1dd2f318912c6bb6a-nj81u4bsxvt6.jpg",
+        "/wp-content/uploads/bb-plugin/cache/4A7A4340-square-3ea6349cd4db1e380946ef8ad74b935e-5dadba9aabf78.jpg",
+        "/wp-content/uploads/bb-plugin/cache/anaheim-0I0A7938-square-2d9a47029033dd8705dcbbd8ef77263c-chg9rwlxdi52.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/themes/canvas/img/proud-logo.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2024/07/Screenshot-2024-07-03-at-11.21.27 AM.png",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8041-square-592af5eb4a79d67475615ae27f6d8bda-oc57qprs1mi6.jpg",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8826-square-ea10770e89acda59bf26b5c0a5261d0a-nj81u4bsxvt6.jpg",
+        "/wp-content/uploads/bb-plugin/cache/4A7A4340-square-28448da5afc058fe1bfbdf291569fa34-5dadba9aabf78.jpg",
+        "/wp-content/uploads/bb-plugin/cache/anaheim-0I0A7938-square-c57c7f43cca4e098562afb7ae0092d02-chg9rwlxdi52.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/careers/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/careers/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/blog/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/blog/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/treatments/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/treatments/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr",
+        "/wp-content/uploads/bb-plugin/cache/4A7A4498-square-e4b0be85ff6478f15b7fd0da4959f4d7-nq1eah8ijyot.jpg",
+        "/wp-content/uploads/bb-plugin/cache/Damon_Braces_Typodont-e1600701089908-square-b260abc12a9fa2be3dc23cc77d57788e-t12dxfspv4be.jpg"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/themes/canvas/img/proud-logo.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/bb-plugin/cache/4A7A4498-square-e4b0be85ff6478f15b7fd0da4959f4d7-nq1eah8ijyot.jpg",
+        "/wp-content/uploads/bb-plugin/cache/Damon_Braces_Typodont-e1600701089908-square-b260abc12a9fa2be3dc23cc77d57788e-t12dxfspv4be.jpg",
+        "/wp-content/uploads/bb-plugin/cache/IMG_5832-square-2113595f1d80a5f60828015529ee4bd8-yk3w6clet2h9.jpg",
+        "/wp-content/uploads/bb-plugin/cache/IMG_5857-square-ec5ea3cdfc224ecbe96253bb65ccf472-gsdu0eq8ltnm.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/themes/canvas/img/proud-logo.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/bb-plugin/cache/4A7A4498-square-73f6824f6ec2f8ab4962374cb2a4e1e5-nq1eah8ijyot.jpg",
+        "/wp-content/uploads/bb-plugin/cache/Damon_Braces_Typodont-e1600701089908-square-d731da7763d872a168b1d629f4c67948-t12dxfspv4be.jpg",
+        "/wp-content/uploads/bb-plugin/cache/IMG_5832-square-2113595f1d80a5f60828015529ee4bd8-yk3w6clet2h9.jpg",
+        "/wp-content/uploads/bb-plugin/cache/IMG_5857-square-ec5ea3cdfc224ecbe96253bb65ccf472-gsdu0eq8ltnm.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/clear-aligners/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/clear-aligners/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 0.9976,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/08/invisalign-retainers-on-a-black-background-braces-2021-09-02-16-18-21-utc-1-scaled.jpg",
+        "/wp-content/uploads/2022/11/KZzQa4CA.png",
+        "/wp-content/uploads/2023/01/IMG_5848.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/08/invisalign-retainers-on-a-black-background-braces-2021-09-02-16-18-21-utc-1-scaled.jpg",
+        "/wp-content/uploads/2022/11/KZzQa4CA.png",
+        "/wp-content/uploads/2023/01/IMG_5848.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/clear-braces/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/clear-braces/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8138-cropped-square-01c638bd70ef54d7f968465e4e6fdcd7-w78ty3qug06i.jpg"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2019/10/IMG_5747.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8138-cropped-square-01c638bd70ef54d7f968465e4e6fdcd7-w78ty3qug06i.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2019/10/IMG_5747.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8138-cropped-square-56ec4d2d01145ecbf87d95f1cdb69a10-w78ty3qug06i.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/metal-braces/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/metal-braces/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8587-square-7f93800b1bb7c306d146a6f914853413-71tczu0s4pqg.jpg"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2020/09/Damon_Braces_Typodont-1024x977.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8587-square-7f93800b1bb7c306d146a6f914853413-71tczu0s4pqg.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2020/09/Damon_Braces_Typodont-1024x977.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8587-square-6feeb26665677ef33e415b5d9bc5fb47-71tczu0s4pqg.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/orthodontics-for-all-ages/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/orthodontics-for-all-ages/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8587-square-7f93800b1bb7c306d146a6f914853413-gfjw0snkhb6v.jpg"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/AdobeStock_400442728.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/01/0I0A8375.jpg",
+        "/wp-content/uploads/2023/01/0I5A1793.jpg",
+        "/wp-content/uploads/2023/01/4A7A4340.jpg",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8587-square-7f93800b1bb7c306d146a6f914853413-gfjw0snkhb6v.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/AdobeStock_400442728.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/01/0I0A8375.jpg",
+        "/wp-content/uploads/2023/01/0I5A1793.jpg",
+        "/wp-content/uploads/2023/01/4A7A4340.jpg",
+        "/wp-content/uploads/bb-plugin/cache/0I0A8587-square-6feeb26665677ef33e415b5d9bc5fb47-gfjw0snkhb6v.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/contact-us/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/contact-us/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/01/4A7A4533.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/01/4A7A4533.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/braces-aligner-care/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/braces-aligner-care/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr",
+        "/wp-content/uploads/bb-plugin/cache/AdobeStock_282233627-portrait-af2704bc294d0f31257f375b1c7216d4-tu34bg2dy97x.jpg"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/bb-plugin/cache/AdobeStock_282233627-portrait-af2704bc294d0f31257f375b1c7216d4-tu34bg2dy97x.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/bb-plugin/cache/AdobeStock_282233627-portrait-f7e75edef9f3952bdcc4eef84ef60db7-tu34bg2dy97x.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/review-us/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/review-us/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2020/10/Google-Review-Image-300x101.png",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2020/10/Google-Review-Image-300x101.png",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/anaheim-orthodontic-office/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/anaheim-orthodontic-office/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/Anaheim-Team.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/Anaheim-Team.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/el-monte-orthodontic-office/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/el-monte-orthodontic-office/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/El-Monte-Team.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/El-Monte-Team.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/huntington-park-orthodontic-office/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/huntington-park-orthodontic-office/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/Huntington-Park-Team.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/Huntington-Park-Team.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/lawndale-orthodontic-office/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/lawndale-orthodontic-office/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/Lawndale-Team.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/Lawndale-Team.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/los-angeles-orthodontic-office/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/los-angeles-orthodontic-office/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/Los-Angeles-Team.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/Los-Angeles-Team.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/santa-ana-orthodontic-office/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/santa-ana-orthodontic-office/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/Santa-Ana-Team.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/Santa-Ana-Team.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/whittier-orthodontic-office/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/whittier-orthodontic-office/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/Whittier-Team.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/Whittier-Team.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/ontario-orthodontic-office/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/ontario-orthodontic-office/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/AdobeStock_282233627.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/01/la-4A7A4363.jpg",
+        "/wp-content/uploads/2023/12/4A7A4390-scaled.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/AdobeStock_282233627.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/01/la-4A7A4363.jpg",
+        "/wp-content/uploads/2023/12/4A7A4390-scaled.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/patients-refer-a-friend/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/patients-refer-a-friend/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/doctor-referral/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/doctor-referral/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/patient-portal/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/patient-portal/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 0.9765,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/privacy-policy",
+      "staging_url": "https://drliliassociates.kinsta.cloud/privacy-policy",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/accessibility-statement-2",
+      "staging_url": "https://drliliassociates.kinsta.cloud/accessibility-statement-2",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/your-el-monte-orthodontist/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/your-el-monte-orthodontist/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 0.976,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-yoonie-heo.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-yoonie-heo.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/anaheim-orthodontist/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/anaheim-orthodontist/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 0.9836,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr",
+        "/wp-content/uploads/bb-plugin/cache/anaheim-0I0A7950-square-85fbfae66072c2aa329756ae429a5962-gxh853tluner.jpg"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2025/05/meet-dr-grace-hur.jpeg",
+        "/wp-content/uploads/2025/12/anaheim-orthodontist-001.jpg",
+        "/wp-content/uploads/2025/12/anaheim-orthodontist.jpg",
+        "/wp-content/uploads/bb-plugin/cache/anaheim-0I0A7950-square-85fbfae66072c2aa329756ae429a5962-gxh853tluner.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2025/05/meet-dr-grace-hur.jpeg",
+        "/wp-content/uploads/2025/12/anaheim-orthodontist-001.jpg",
+        "/wp-content/uploads/2025/12/anaheim-orthodontist.jpg",
+        "/wp-content/uploads/bb-plugin/cache/anaheim-0I0A7950-square-b33a2127993a1147c7c652147e1aeda6-gxh853tluner.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/meet-dr-lili-mirtorabi",
+      "staging_url": "https://drliliassociates.kinsta.cloud/meet-dr-lili-mirtorabi",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 0.9885,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/01/IMG_2466.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/01/IMG_2466.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/orthodontist-los-angeles/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/orthodontist-los-angeles/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 0.9842,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2025/12/Orthodontist-Los-Angeles-001.jpg",
+        "/wp-content/uploads/2025/12/orthodontist-office-los-angeles-002.jpg",
+        "/wp-content/uploads/2025/12/orthodontist-office-los-angeles.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2025/12/Orthodontist-Los-Angeles-001.jpg",
+        "/wp-content/uploads/2025/12/orthodontist-office-los-angeles-002.jpg",
+        "/wp-content/uploads/2025/12/orthodontist-office-los-angeles.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/your-los-angeles-orthodontist/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/your-los-angeles-orthodontist/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-sue-kim.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-sue-kim.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/your-lawndale-orthodontist/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/your-lawndale-orthodontist/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 0.9657,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-melineh-dereghishian.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-melineh-dereghishian.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/your-santa-ana-orthodontist/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/your-santa-ana-orthodontist/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 0.9628,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-jessica-liu.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-sheila-luwiharto.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-jessica-liu.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-sheila-luwiharto.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/why-is-it-important-to-use-a-retainer-after-braces/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/why-is-it-important-to-use-a-retainer-after-braces/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2024/05/image1-1.jpg",
+        "/wp-content/uploads/2024/05/image2-1-1024x683.jpg",
+        "/wp-content/uploads/2024/05/image3-1-1024x683.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2024/05/image1-1.jpg",
+        "/wp-content/uploads/2024/05/image2-1-1024x683.jpg",
+        "/wp-content/uploads/2024/05/image3-1-1024x683.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/how-do-i-handle-orthodontic-emergencies/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/how-do-i-handle-orthodontic-emergencies/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2024/05/image1-1024x682.jpg",
+        "/wp-content/uploads/2024/05/image2.jpg",
+        "/wp-content/uploads/2024/05/image3-e1714597875471-edited.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2024/05/image1-1024x682.jpg",
+        "/wp-content/uploads/2024/05/image2.jpg",
+        "/wp-content/uploads/2024/05/image3-e1714597875471-edited.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/can-i-still-play-sports-with-braces/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/can-i-still-play-sports-with-braces/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2024/03/image1-1024x512.jpg",
+        "/wp-content/uploads/2024/03/image2-1024x683.jpg",
+        "/wp-content/uploads/2024/03/image3.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2024/03/image1-1024x512.jpg",
+        "/wp-content/uploads/2024/03/image2-1024x683.jpg",
+        "/wp-content/uploads/2024/03/image3.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/how-do-braces-move-teeth/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/how-do-braces-move-teeth/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2024/02/image1-1024x683.jpg",
+        "/wp-content/uploads/2024/02/image2.jpg",
+        "/wp-content/uploads/2024/02/image6-1024x683.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2024/02/image1-1024x683.jpg",
+        "/wp-content/uploads/2024/02/image2.jpg",
+        "/wp-content/uploads/2024/02/image6-1024x683.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/how-to-maintain-good-oral-health-with-orthodontic-treatment/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/how-to-maintain-good-oral-health-with-orthodontic-treatment/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/uszZjJIbsYh2fx8zRobpOeJ1YjRUKpKQq51KArsIuOf4dW4WokzrrgGk8wY7ztxrFhC8y91LGPaHiMEXCxDDdttPw6vGe6nmOrxptNrV6hPeFEWNvlwmbgVwWkQ8AsCBKc3eFqTjIMzIRzIIJc97jfU",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/12/0I0A8297-scaled.jpg",
+        "/wp-content/uploads/2023/12/0I0A8686-1024x683.jpg"
+      ],
+      "staging_images": [
+        "/uszZjJIbsYh2fx8zRobpOeJ1YjRUKpKQq51KArsIuOf4dW4WokzrrgGk8wY7ztxrFhC8y91LGPaHiMEXCxDDdttPw6vGe6nmOrxptNrV6hPeFEWNvlwmbgVwWkQ8AsCBKc3eFqTjIMzIRzIIJc97jfU",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/12/0I0A8297-scaled.jpg",
+        "/wp-content/uploads/2023/12/0I0A8686-1024x683.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/celebrating-25-years-of-dr-lili-associates/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/celebrating-25-years-of-dr-lili-associates/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2024/01/0I0A8825-2-1024x512.jpg",
+        "/wp-content/uploads/2024/01/4A7A4350-2-1024x512.jpg",
+        "/wp-content/uploads/2024/01/Screenshot-2024-01-19-at-2.02.29 PM.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2024/01/0I0A8825-2-1024x512.jpg",
+        "/wp-content/uploads/2024/01/4A7A4350-2-1024x512.jpg",
+        "/wp-content/uploads/2024/01/Screenshot-2024-01-19-at-2.02.29 PM.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/do-i-need-dental-insurance-to-get-orthodontic-treatment/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/do-i-need-dental-insurance-to-get-orthodontic-treatment/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/11/DrLA-Patient-Interaction-Edited-013-2-scaled.jpg",
+        "/wp-content/uploads/2023/11/DrLA-Patient-Interaction-Edited-045-2-1024x683.jpg",
+        "/wp-content/uploads/2023/11/DrLA-Patient-Interaction-Edited-049-2-1024x683.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/11/DrLA-Patient-Interaction-Edited-013-2-scaled.jpg",
+        "/wp-content/uploads/2023/11/DrLA-Patient-Interaction-Edited-045-2-1024x683.jpg",
+        "/wp-content/uploads/2023/11/DrLA-Patient-Interaction-Edited-049-2-1024x683.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/5-benefits-of-straight-teeth/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/5-benefits-of-straight-teeth/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/10/DrLA-Patient-Interaction-Edited-036-scaled.jpg",
+        "/wp-content/uploads/2023/10/Screenshot-2023-10-05-at-11.38.04-PM-e1697839186273-1024x968.png",
+        "/wp-content/uploads/2023/10/Screenshot-2023-10-05-at-11.38.21-PM-1024x806.png"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/10/DrLA-Patient-Interaction-Edited-036-scaled.jpg",
+        "/wp-content/uploads/2023/10/Screenshot-2023-10-05-at-11.38.04-PM-e1697839186273-1024x968.png",
+        "/wp-content/uploads/2023/10/Screenshot-2023-10-05-at-11.38.21-PM-1024x806.png"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/blog/page/2/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/blog/page/2/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/anaheim-orthodontics/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/anaheim-orthodontics/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-grace-hur.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-grace-hur.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/anaheim-invisalign/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/anaheim-invisalign/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/clear-choice-aligner-instructions",
+      "staging_url": "https://drliliassociates.kinsta.cloud/clear-choice-aligner-instructions",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/01/0I0A8138-cropped.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/01/0I0A8138-cropped.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/what-to-do-if-my-braces-break/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/what-to-do-if-my-braces-break/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/09/DrLA-Patient-Interaction-Edited-019-1024x684.jpg",
+        "/wp-content/uploads/2023/09/DrLA-Patient-Interaction-Edited-033-1024x683.jpg",
+        "/wp-content/uploads/2023/09/DrLA-Patient-Interaction-Edited-101-scaled.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/09/DrLA-Patient-Interaction-Edited-019-1024x684.jpg",
+        "/wp-content/uploads/2023/09/DrLA-Patient-Interaction-Edited-033-1024x683.jpg",
+        "/wp-content/uploads/2023/09/DrLA-Patient-Interaction-Edited-101-scaled.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/anaheim-braces/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/anaheim-braces/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/el-monte-orthodontics/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/el-monte-orthodontics/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-yoonie-heo.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-yoonie-heo.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/huntington-park-orthodontics/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/huntington-park-orthodontics/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 0.9921,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-janice-lee.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-jenny-jeon.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-lawrence-lin.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-nilou-sherf.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-janice-lee.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-jenny-jeon.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-lawrence-lin.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-nilou-sherf.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/huntington-park-braces/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/huntington-park-braces/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/huntington-park-invisalign/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/huntington-park-invisalign/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/santa-ana-orthodontics/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/santa-ana-orthodontics/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-jessica-liu.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-sheila-luwiharto.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-jessica-liu.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-sheila-luwiharto.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/santa-ana-braces/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/santa-ana-braces/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/whittier-orthodontics/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/whittier-orthodontics/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-carrie-imoto.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-carrie-imoto.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/whittier-invisalign/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/whittier-invisalign/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/whittier-braces/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/whittier-braces/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/lawndale-braces/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/lawndale-braces/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/meet-dr-jennifer-wu/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/meet-dr-jennifer-wu/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/12/P1-1.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/12/P1-1.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/lawndale-invisalign/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/lawndale-invisalign/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/los-angeles-orthodontics/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/los-angeles-orthodontics/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-sue-kim.jpeg",
+        "/wp-content/uploads/2023/01/IMG_5848-1024x682.jpg",
+        "/wp-content/uploads/2023/08/Dr.-Lili-Associates-3-1024x683.jpg",
+        "/wp-content/uploads/2024/02/image1-1024x683.jpg",
+        "/wp-content/uploads/2026/01/dr-lili-patient-int-2200-1024x683.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-sue-kim.jpeg",
+        "/wp-content/uploads/2023/01/IMG_5848-1024x682.jpg",
+        "/wp-content/uploads/2023/08/Dr.-Lili-Associates-3-1024x683.jpg",
+        "/wp-content/uploads/2024/02/image1-1024x683.jpg",
+        "/wp-content/uploads/2026/01/dr-lili-patient-int-2200-1024x683.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/lawndale-orthodontics/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/lawndale-orthodontics/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-melineh-dereghishian.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-melineh-dereghishian.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/why-see-an-orthodontist-near-me/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/why-see-an-orthodontist-near-me/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/07/Dr.-Lili-_-Associates-1-scaled.jpg",
+        "/wp-content/uploads/2023/07/Dr.-Lili-_-Associates-2-1024x683.jpg",
+        "/wp-content/uploads/2023/07/Dr.-Lili-_-Associates-3-1024x683.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/07/Dr.-Lili-_-Associates-1-scaled.jpg",
+        "/wp-content/uploads/2023/07/Dr.-Lili-_-Associates-2-1024x683.jpg",
+        "/wp-content/uploads/2023/07/Dr.-Lili-_-Associates-3-1024x683.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/6-rules-to-creating-a-beautiful-smile-with-clear-aligners/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/6-rules-to-creating-a-beautiful-smile-with-clear-aligners/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/06/4A7A4338-scaled.jpg",
+        "/wp-content/uploads/2023/06/4A7A4535-1024x683.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/06/4A7A4338-scaled.jpg",
+        "/wp-content/uploads/2023/06/4A7A4535-1024x683.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/which-orthodontic-treatment-is-right-for-me/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/which-orthodontic-treatment-is-right-for-me/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/08/Dr.-Lili-Associates-1-scaled.jpg",
+        "/wp-content/uploads/2023/08/Dr.-Lili-Associates-2-1024x683.jpg",
+        "/wp-content/uploads/2023/08/Dr.-Lili-Associates-3-1024x683.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/08/Dr.-Lili-Associates-1-scaled.jpg",
+        "/wp-content/uploads/2023/08/Dr.-Lili-Associates-2-1024x683.jpg",
+        "/wp-content/uploads/2023/08/Dr.-Lili-Associates-3-1024x683.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/your-anaheim-orthodontist/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/your-anaheim-orthodontist/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-grace-hur.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2022/06/meet-dr-grace-hur.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/braces-los-angles/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/braces-los-angles/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2019/10/IMG_5819.jpg",
+        "/wp-content/uploads/2019/10/treatment-ceramic-braces.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/01/4A7A4340.jpg",
+        "/wp-content/uploads/2023/07/Dr.-Lili-_-Associates-1-scaled.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2019/10/IMG_5819.jpg",
+        "/wp-content/uploads/2019/10/treatment-ceramic-braces.jpg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/01/4A7A4340.jpg",
+        "/wp-content/uploads/2023/07/Dr.-Lili-_-Associates-1-scaled.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/invisalign-los-angeles/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/invisalign-los-angeles/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/06/4A7A4535-scaled.jpg",
+        "/wp-content/uploads/2023/08/Dr.-Lili-Associates-2-scaled.jpg",
+        "/wp-content/uploads/2023/08/Dr.-Lili-Associates-3-scaled.jpg",
+        "/wp-content/uploads/2023/11/DrLA-Patient-Interaction-Edited-045-2-scaled.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/06/4A7A4535-scaled.jpg",
+        "/wp-content/uploads/2023/08/Dr.-Lili-Associates-2-scaled.jpg",
+        "/wp-content/uploads/2023/08/Dr.-Lili-Associates-3-scaled.jpg",
+        "/wp-content/uploads/2023/11/DrLA-Patient-Interaction-Edited-045-2-scaled.jpg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/santa-ana-invisalign/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/santa-ana-invisalign/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/el-monte-invisalign/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/el-monte-invisalign/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/el-monte-braces/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/el-monte-braces/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/los-angeles-invisalign/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/los-angeles-invisalign/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/los-angeles-braces/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/los-angeles-braces/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg"
+      ],
+      "error": null
+    },
+    {
+      "live_url": "https://drliliortho.com/invisalign/",
+      "staging_url": "https://drliliassociates.kinsta.cloud/invisalign/",
+      "live_status": 200,
+      "staging_status": 200,
+      "url_ok": true,
+      "content_similarity": 1.0,
+      "content_ok": true,
+      "text_diff": {
+        "words_only_in_live": [],
+        "words_only_in_staging": [],
+        "sentences_only_in_live": [],
+        "sentences_only_in_staging": []
+      },
+      "missing_images": [
+        "/tr"
+      ],
+      "broken_images": [],
+      "images_ok": false,
+      "live_images": [
+        "/tr",
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/06/4A7A4535-scaled.jpg",
+        "/wp-content/uploads/2023/08/Dr.-Lili-Associates-2-scaled.jpg",
+        "/wp-content/uploads/2023/08/Dr.-Lili-Associates-3-scaled.jpg",
+        "/wp-content/uploads/2023/11/DrLA-Patient-Interaction-Edited-045-2-scaled.jpg"
+      ],
+      "staging_images": [
+        "/wp-content/themes/canvas/img/footer-logo.png",
+        "/wp-content/themes/canvas/img/lili-logo-no-tagline.svg",
+        "/wp-content/uploads/2022/06/map.jpeg",
+        "/wp-content/uploads/2023/06/4A7A4535-scaled.jpg",
+        "/wp-content/uploads/2023/08/Dr.-Lili-Associates-2-scaled.jpg",
+        "/wp-content/uploads/2023/08/Dr.-Lili-Associates-3-scaled.jpg",
+        "/wp-content/uploads/2023/11/DrLA-Patient-Interaction-Edited-045-2-scaled.jpg"
+      ],
+      "error": null
+    }
+  ]
+}
